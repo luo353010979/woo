@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:woo/common/index.dart';
 
 import 'index.dart';
 import 'widgets/widgets.dart';
@@ -9,7 +10,17 @@ class LoginPage extends GetView<LoginController> {
 
   // 主视图
   Widget _buildView() {
-    return const HelloWidget();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        ElevatedButton(
+          onPressed: () {
+            Get.toNamed(RouteNames.systemSplash);
+          },
+          child: Text("跳转到Splash"),
+        ),
+      ],
+    );
   }
 
   @override
@@ -18,9 +29,7 @@ class LoginPage extends GetView<LoginController> {
       builder: (_) {
         return Scaffold(
           appBar: AppBar(title: const Text("login")),
-          body: SafeArea(
-            child: _buildView(),
-          ),
+          body: SafeArea(child: _buildView()),
         );
       },
     );
