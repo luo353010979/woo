@@ -111,5 +111,9 @@ class RoutePages {
         name: RouteNames.systemWelcome,
         page: () => const WelcomePage(),
       ),
+        GetPage(
+        name: RouteNames.stylesStyleIndex,
+        page: () => const StyleIndexPage(),
+      ),
   ];
 }

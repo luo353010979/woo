@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:woo/common/index.dart';
@@ -11,6 +12,9 @@ class ConfigService extends GetxService {
   // 多语言
   Locale locale = PlatformDispatcher.instance.locale;
 
+  // 主题
+  AdaptiveThemeMode themeMode = AdaptiveThemeMode.light;
+
   // 包信息
   PackageInfo? _platform;
 
@@ -20,6 +24,7 @@ class ConfigService extends GetxService {
   // 初始化
   Future<ConfigService> init() async {
     await getPlatform();
+    await initTheme();
     initLocale();
     return this;
   }
@@ -45,5 +50,26 @@ class ConfigService extends GetxService {
     locale = value;
     Get.updateLocale(value);
     Storage().setString(Constants.storageLanguageCode, value.languageCode);
+  }
+
+  // 初始 theme
+  Future<void> initTheme() async {
+    final savedThemeMode = await AdaptiveTheme.getThemeMode();
+    themeMode = savedThemeMode ?? AdaptiveThemeMode.light;
+  }
+
+  // 切换 theme
+  Future<void> setThemeMode(String themeKey) async {
+    switch (themeKey) {
+      case "light":
+        AdaptiveTheme.of(Get.context!).setLight();
+        break;
+      case "dark":
+        AdaptiveTheme.of(Get.context!).setDark();
+        break;
+      case "system":
+        AdaptiveTheme.of(Get.context!).setSystem();
+        break;
+    }
   }
 }

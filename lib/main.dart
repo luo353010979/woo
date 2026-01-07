@@ -1,3 +1,4 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:woo/common/index.dart';
@@ -14,21 +15,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: false,
+    return AdaptiveTheme(
+      light: AppTheme.light,
+      dark: AppTheme.dark,
+      initial: ConfigService.to.themeMode,
+      debugShowFloatingThemeButton: true,
+      builder: (theme, darkTheme) => GetMaterialApp(
+        title: 'Flutter Demo',
+        theme: theme,
+        darkTheme: darkTheme,
+        // initialRoute: RouteNames.systemSplash,
+        initialRoute: RouteNames.stylesStyleIndex,
+        getPages: RoutePages.list,
+        navigatorObservers: [RoutePages.observers],
+        // 多语言
+        translations: Translation(), // 词典
+        localizationsDelegates: Translation.localizationsDelegates, // 代理
+        supportedLocales: Translation.supportedLocales, // 支持的语言种类
+        locale: ConfigService.to.locale, // 当前语言种类
+        fallbackLocale: Translation.fallbackLocale, // 默认语言种类
       ),
-      initialRoute: RouteNames.systemSplash,
-      getPages: RoutePages.list,
-      navigatorObservers: [RoutePages.observers],
-      // 多语言
-      translations: Translation(), // 词典
-      localizationsDelegates: Translation.localizationsDelegates, // 代理
-      supportedLocales: Translation.supportedLocales, // 支持的语言种类
-      locale: ConfigService.to.locale, // 当前语言种类
-      fallbackLocale: Translation.fallbackLocale, // 默认语言种类
     );
   }
 }

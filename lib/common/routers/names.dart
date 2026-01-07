@@ -3,6 +3,7 @@ static const cartApplyPromoCode = '/cart_apply_promo_code';
 static const cartBuyDone = '/cart_buy_done';
 static const cartBuyNow = '/cart_buy_now';
 static const cartCartIndex = '/cart_cart_index';
+
 static const goodsCategory = '/goods_category';
 static const goodsHome = '/goods_home';
 static const goodsProductDetails = '/goods_product_details';
@@ -14,6 +15,7 @@ static const myOrderDetails = '/my_order_details';
 static const myOrderList = '/my_order_list';
 static const myProfileEdit = '/my_profile_edit';
 static const myTheme = '/my_theme';
+
 static const searchSearchFilter = '/search_search_filter';
 static const searchSearchIndex = '/search_search_index';
 static const systemLogin = '/system_login';
@@ -23,5 +25,7 @@ static const systemRegisterPin = '/system_register_pin';
 static const systemSplash = '/system_splash';
 static const systemUserAgreement = '/system_user_agreement';
 static const systemWelcome = '/system_welcome';
+
+static const stylesStyleIndex = '/styles_style_index';
 
 }
