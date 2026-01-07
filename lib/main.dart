@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:woo/common/index.dart';
-import 'package:woo/global';
+import 'package:woo/global.dart';
 
 void main() async {
   await Global.init();
@@ -23,6 +23,12 @@ class MyApp extends StatelessWidget {
       initialRoute: RouteNames.systemSplash,
       getPages: RoutePages.list,
       navigatorObservers: [RoutePages.observers],
+      // 多语言
+      translations: Translation(), // 词典
+      localizationsDelegates: Translation.localizationsDelegates, // 代理
+      supportedLocales: Translation.supportedLocales, // 支持的语言种类
+      locale: ConfigService.to.locale, // 当前语言种类
+      fallbackLocale: Translation.fallbackLocale, // 默认语言种类
     );
   }
 }
