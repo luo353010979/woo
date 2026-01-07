@@ -3,24 +3,24 @@ import 'package:get/get.dart';
 
 import 'index.dart';
 
-class LoginPage extends GetView<LoginController> {
-  const LoginPage({super.key});
+class WelcomePage extends GetView<WelcomeController> {
+  const WelcomePage({super.key});
 
   // 主视图
   Widget _buildView() {
     return const Center(
-      child: Text("LoginPage"),
+      child: Text("WelcomePage"),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<LoginController>(
-      init: LoginController(),
-      id: "login",
+    return GetBuilder<WelcomeController>(
+      init: WelcomeController(),
+      id: "welcome",
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("login")),
+          appBar: AppBar(title: const Text("welcome")),
           body: SafeArea(
             child: _buildView(),
           ),

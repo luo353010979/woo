@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
-  LoginController();
+class WelcomeController extends GetxController {
+  WelcomeController();
 
   _initData() {
-    update(["login"]);
+    update(["welcome"]);
   }
 
   void onTap() {}

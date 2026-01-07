@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: RouteNames.systemLogin,
+      initialRoute: RouteNames.systemSplash,
       getPages: RoutePages.list,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      navigatorObservers: [RoutePages.observers],
     );
   }
 }

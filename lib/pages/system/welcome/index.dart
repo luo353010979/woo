@@ -1,4 +1,4 @@
-library login;
+library welcome;
 
 export './controller.dart';
 export './view.dart';

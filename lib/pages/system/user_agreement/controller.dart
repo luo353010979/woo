@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
-  LoginController();
+class UserAgreementController extends GetxController {
+  UserAgreementController();
 
   _initData() {
-    update(["login"]);
+    update(["user_agreement"]);
   }
 
   void onTap() {}
