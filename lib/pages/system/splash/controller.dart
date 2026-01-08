@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:woo/common/index.dart';
 
 class SplashController extends GetxController {
   SplashController();

@@ -57,6 +57,10 @@ class AppTheme {
 
   /// 获取主题
   static ThemeData _getTheme(ColorScheme scheme) {
-    return ThemeData(useMaterial3: false, colorScheme: scheme);
+    return ThemeData(
+      useMaterial3: false,
+      colorScheme: scheme,
+      fontFamily: 'Montserrat',
+    );
   }
 }
