@@ -27,5 +27,6 @@ static const systemUserAgreement = '/system_user_agreement';
 static const systemWelcome = '/system_welcome';
 
 static const stylesStyleIndex = '/styles_style_index';
+static const stylesText = '/styles_text';
 
 }

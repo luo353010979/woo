@@ -25,3 +25,4 @@ export 'system/splash/index.dart';
 export 'system/user_agreement/index.dart';
 export 'system/welcome/index.dart';
 export 'styles/styles_index/index.dart';
+export 'styles/text/index.dart';

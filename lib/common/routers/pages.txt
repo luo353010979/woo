@@ -68,8 +68,12 @@
         page: () => const SearchIndexPage(),
       ),
       GetPage(
-        name: RouteNames.stylesStyleIndex,
-        page: () => const StyleIndexPage(),
+        name: RouteNames.stylesStylesIndex,
+        page: () => const StylesIndexPage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesText,
+        page: () => const TextPage(),
       ),
       GetPage(
         name: RouteNames.systemLogin,
