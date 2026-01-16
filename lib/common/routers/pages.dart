@@ -119,5 +119,9 @@ class RoutePages {
         name: RouteNames.stylesText,
         page: () => const TextPage(),
       ),
+        GetPage(
+        name: RouteNames.stylesImage,
+        page: () => const ImagePage(),
+      ),
   ];
 }

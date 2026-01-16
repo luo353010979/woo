@@ -28,5 +28,6 @@ static const systemWelcome = '/system_welcome';
 
 static const stylesStyleIndex = '/styles_style_index';
 static const stylesText = '/styles_text';
+static const stylesImage = '/styles_image';
 
 }
