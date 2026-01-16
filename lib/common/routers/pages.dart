@@ -123,5 +123,9 @@ class RoutePages {
         name: RouteNames.stylesImage,
         page: () => const ImagePage(),
       ),
+        GetPage(
+        name: RouteNames.stylesIcon,
+        page: () => const IconPage(),
+      ),
   ];
 }

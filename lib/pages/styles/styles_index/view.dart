@@ -22,7 +22,12 @@ class StyleIndexPage extends GetView<StyleIndexController> {
           onTap: () => Get.toNamed(RouteNames.stylesImage),
           title: const Text("Image 图片"),
         ),
+        ListTile(
+          onTap: () => Get.toNamed(RouteNames.stylesIcon),
+          title: const Text("Icon 图标"),
+        ),
 
+        ///////////////////////////////////////////////////////////////////////////////////////
         ListTile(
           onTap: controller.onLanguageSelected,
           title: Text("语言 : ${ConfigService.to.locale.toLanguageTag()}"),
