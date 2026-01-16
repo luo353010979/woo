@@ -1,6 +1,4 @@
-/// svgs assets
-class AssetsSvgs {
-  static const cBagSvg = 'assets/svgs/c-bag.svg';
+static const cBagSvg = 'assets/svgs/c-bag.svg';
 static const cBikeSvg = 'assets/svgs/c-bike.svg';
 static const cElectricSvg = 'assets/svgs/c-electric.svg';
 static const cHomeSvg = 'assets/svgs/c-home.svg';
@@ -39,5 +37,3 @@ static const pNotificationsSvg = 'assets/svgs/p-notifications.svg';
 static const pThemeSvg = 'assets/svgs/p-theme.svg';
 static const pTranslateSvg = 'assets/svgs/p-translate.svg';
 static const profileHeaderBackgroundSvg = 'assets/svgs/profile-header-background.svg';
-
-}
