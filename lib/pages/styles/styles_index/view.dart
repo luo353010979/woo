@@ -35,6 +35,12 @@ class StyleIndexPage extends GetView<StyleIndexController> {
           title: const Text("Button 按钮"),
         ),
 
+        // Input 输入框
+        ListTile(
+          onTap: () => Get.toNamed(RouteNames.stylesInput),
+          title: const Text("Input 输入框"),
+        ),
+
         ///////////////////////////////////////////////////////////////////////////////////////
         ListTile(
           onTap: controller.onLanguageSelected,

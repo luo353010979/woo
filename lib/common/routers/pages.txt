@@ -68,8 +68,8 @@
         page: () => const SearchIndexPage(),
       ),
       GetPage(
-        name: RouteNames.stylesButtonDart,
-        page: () => const ButtonDartPage(),
+        name: RouteNames.stylesButton,
+        page: () => const ButtonPage(),
       ),
       GetPage(
         name: RouteNames.stylesIcon,
@@ -78,6 +78,10 @@
       GetPage(
         name: RouteNames.stylesImage,
         page: () => const ImagePage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesInput,
+        page: () => const InputPage(),
       ),
       GetPage(
         name: RouteNames.stylesStylesIndex,

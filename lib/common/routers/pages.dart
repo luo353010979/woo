@@ -131,5 +131,9 @@ class RoutePages {
         name: RouteNames.stylesButton,
         page: () => const ButtonDartPage(),
       ),
+         GetPage(
+        name: RouteNames.stylesInput,
+        page: () => const InputPage(),
+      ),
   ];
 }
