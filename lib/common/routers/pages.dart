@@ -127,5 +127,9 @@ class RoutePages {
         name: RouteNames.stylesIcon,
         page: () => const IconPage(),
       ),
+         GetPage(
+        name: RouteNames.stylesButton,
+        page: () => const ButtonDartPage(),
+      ),
   ];
 }

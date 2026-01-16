@@ -22,9 +22,17 @@ class StyleIndexPage extends GetView<StyleIndexController> {
           onTap: () => Get.toNamed(RouteNames.stylesImage),
           title: const Text("Image 图片"),
         ),
+
+        // 图标
         ListTile(
           onTap: () => Get.toNamed(RouteNames.stylesIcon),
           title: const Text("Icon 图标"),
+        ),
+
+        // 按钮
+        ListTile(
+          onTap: () => Get.toNamed(RouteNames.stylesButton),
+          title: const Text("Button 按钮"),
         ),
 
         ///////////////////////////////////////////////////////////////////////////////////////

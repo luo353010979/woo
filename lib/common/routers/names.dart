@@ -30,5 +30,6 @@ static const stylesStyleIndex = '/styles_style_index';
 static const stylesText = '/styles_text';
 static const stylesImage = '/styles_image';
 static const stylesIcon = '/styles_icon';
+static const stylesButton = '/styles_button';
 
 }
