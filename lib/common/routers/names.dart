@@ -32,5 +32,6 @@ static const stylesImage = '/styles_image';
 static const stylesIcon = '/styles_icon';
 static const stylesButton = '/styles_button';
 static const stylesInput = '/styles_input';
+static const stylesTextForm = '/styles_text_form';
 
 }

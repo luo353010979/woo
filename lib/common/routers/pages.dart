@@ -151,5 +151,9 @@ class RoutePages {
         name: RouteNames.stylesInput,
         page: () => const InputPage(),
       ),
+         GetPage(
+        name: RouteNames.stylesTextForm,
+        page: () => const TextFormPage(),
+      ),
   ];
 }
