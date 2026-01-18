@@ -44,12 +44,17 @@ dependencies:
   shared_preferences: ^2.5.3
   # 网络请求
   dio: ^5.9.0
+  # 主题切换
   adaptive_theme: ^3.7.2
   ducafe_ui_core: ^1.0.6
+  # 图片缓存
   cached_network_image: ^3.4.1
+  # svg 图片支持
   flutter_svg: ^2.2.3
   # 轮播图
   carousel_slider: ^5.1.1
+  # 表单验证
+  validatorless: ^1.2.5
 
 dev_dependencies:
   flutter_test:
@@ -90,7 +95,6 @@ flutter_native_splash:
   android_12:
     image: "assets/launcher/android12.png"
     icon_background_color: "#324ea1"
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
