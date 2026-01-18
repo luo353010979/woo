@@ -56,6 +56,7 @@ dependencies:
   # 表单验证
   validatorless: ^1.2.5
   pinput: ^6.0.1
+  flutter_easyloading: ^3.0.5
 
 dev_dependencies:
   flutter_test:

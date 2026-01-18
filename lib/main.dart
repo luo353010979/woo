@@ -1,6 +1,7 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:ducafe_ui_core/ducafe_ui_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:woo/common/index.dart';
 import 'package:woo/global.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       builder: (theme, darkTheme) => ScreenUtilInit(
         designSize: const Size(414, 896),
         splitScreenMode: false, // 支持分屏尺寸
-        minTextAdapt: false,    // 是否根据宽度/高度中的最小值来适配文字
+        minTextAdapt: false, // 是否根据宽度/高度中的最小值来适配文字
         builder: (context, child) => GetMaterialApp(
           title: 'Flutter Demo',
           theme: theme,
@@ -39,19 +40,20 @@ class MyApp extends StatelessWidget {
           supportedLocales: Translation.supportedLocales, // 支持的语言种类
           locale: ConfigService.to.locale, // 当前语言种类
           fallbackLocale: Translation.fallbackLocale, // 默认语言种类
-
-           // builder
+          // builder
           builder: (context, widget) {
+            widget = EasyLoading.init()(context, widget);
+
             // 不随系统字体缩放比例
             return MediaQuery(
-              data: MediaQuery.of(context)
-                  .copyWith(textScaler: const TextScaler.linear(1.0)),
+              data: MediaQuery.of(
+                context,
+              ).copyWith(textScaler: const TextScaler.linear(1.0)),
               child: widget!,
             );
           },
 
           debugShowCheckedModeBanner: false,
-
         ),
       ),
     );
