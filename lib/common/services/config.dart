@@ -21,6 +21,9 @@ class ConfigService extends GetxService {
   // 版本号
   String get version => _platform?.version ?? '-';
 
+  // 是否首次打开
+  bool get isAlreadyOpen => Storage().getBool(Constants.storageAlreadyOpen);
+
   // 初始化
   Future<ConfigService> init() async {
     await getPlatform();
@@ -71,5 +74,10 @@ class ConfigService extends GetxService {
         AdaptiveTheme.of(Get.context!).setSystem();
         break;
     }
+  }
+
+  // 标记已打开app
+  void setAlreadyOpen() {
+    Storage().setBool(Constants.storageAlreadyOpen, true);
   }
 }

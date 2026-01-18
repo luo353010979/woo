@@ -14,7 +14,8 @@ class RoutePages {
 
   // 列表
   static List<GetPage> list = [
-    
+
+      /// 购物车
       GetPage(
         name: RouteNames.cartApplyPromoCode,
         page: () => const ApplyPromoCodePage(),
@@ -31,6 +32,8 @@ class RoutePages {
         name: RouteNames.cartCartIndex,
         page: () => const CartIndexPage(),
       ),
+
+      /// 商品
       GetPage(
         name: RouteNames.goodsCategory,
         page: () => const CategoryPage(),
@@ -47,6 +50,8 @@ class RoutePages {
         name: RouteNames.goodsProductList,
         page: () => const ProductListPage(),
       ),
+
+      /// 我的
       GetPage(
         name: RouteNames.myLanguage,
         page: () => const LanguagePage(),
@@ -75,6 +80,9 @@ class RoutePages {
         name: RouteNames.myTheme,
         page: () => const ThemePage(),
       ),
+
+
+      /// 搜索
       GetPage(
         name: RouteNames.searchSearchFilter,
         page: () => const SearchFilterPage(),
@@ -83,14 +91,19 @@ class RoutePages {
         name: RouteNames.searchSearchIndex,
         page: () => const SearchIndexPage(),
       ),
-      GetPage(
-        name: RouteNames.systemLogin,
-        page: () => const LoginPage(),
-      ),
+
+
+      /// 系统
+      /// 首页
       GetPage(
         name: RouteNames.systemMain,
         page: () => const MainPage(),
       ),
+      GetPage(
+        name: RouteNames.systemLogin,
+        page: () => const LoginPage(),
+      ),
+      
       GetPage(
         name: RouteNames.systemRegister,
         page: () => const RegisterPage(),
@@ -111,6 +124,9 @@ class RoutePages {
         name: RouteNames.systemWelcome,
         page: () => const WelcomePage(),
       ),
+
+
+      /// 样式
         GetPage(
         name: RouteNames.stylesStyleIndex,
         page: () => const StyleIndexPage(),
