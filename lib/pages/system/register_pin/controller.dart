@@ -60,7 +60,8 @@ class RegisterPinController extends GetxController {
       bool isOk = await UserApi.register(req);
       if (isOk) {
         Loading.success(
-            LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}));
+          LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}),
+        );
         Get.back(result: true);
       }
 
