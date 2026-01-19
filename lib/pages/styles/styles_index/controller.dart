@@ -10,8 +10,7 @@ class StyleIndexController extends GetxController {
 
   void onTap() {}
 
-
-   onLanguageSelected() {
+  onLanguageSelected() {
     var en = Translation.supportedLocales[0];
     var zh = Translation.supportedLocales[1];
 

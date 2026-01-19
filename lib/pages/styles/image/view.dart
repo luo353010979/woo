@@ -24,40 +24,28 @@ class ImagePage extends GetView<ImageController> {
       const ImageWidget.img(
         AssetsImages.homePlaceholderPng,
         fit: BoxFit.cover,
-      ).tight(
-        width: width,
-        height: 200,
-      ),
+      ).tight(width: width, height: 200),
 
       // 远程图片
       const Text("远程图片"),
       ImageWidget.img(
         imgUrl,
         fit: BoxFit.cover,
-      ).tight(
-        width: width,
-        height: 200,
-      ),
+      ).tight(width: width, height: 200),
 
       // 本地 svg
       const Text("本地 svg"),
       const ImageWidget.svg(
         AssetsSvgs.cBagSvg,
         fit: BoxFit.cover,
-      ).tight(
-        width: width,
-        height: 200,
-      ),
+      ).tight(width: width, height: 200),
 
       // svg raw
       const Text("svg raw"),
       ImageWidget.svgRaw(
         svgRaw,
         fit: BoxFit.cover,
-      ).tight(
-        width: width,
-        height: 200,
-      ),
+      ).tight(width: width, height: 200),
 
       // end
     ].toColumnSpace().scrollable();
@@ -74,8 +62,10 @@ class ImagePage extends GetView<ImageController> {
           body: SafeArea(
             child: LayoutBuilder(
               builder: (BuildContext context, BoxConstraints constraints) {
-                return _buildView(context, constraints)
-                    .paddingHorizontal(AppSpace.page);
+                return _buildView(
+                  context,
+                  constraints,
+                ).paddingHorizontal(AppSpace.page);
               },
             ),
           ),
@@ -84,4 +74,3 @@ class ImagePage extends GetView<ImageController> {
     );
   }
 }
-

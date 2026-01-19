@@ -8,9 +8,7 @@ class LoginPage extends GetView<LoginController> {
 
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("LoginPage"),
-    );
+    return const Center(child: Text("LoginPage"));
   }
 
   @override
@@ -21,9 +19,7 @@ class LoginPage extends GetView<LoginController> {
       builder: (_) {
         return Scaffold(
           appBar: AppBar(title: const Text("login")),
-          body: SafeArea(
-            child: _buildView(),
-          ),
+          body: SafeArea(child: _buildView()),
         );
       },
     );

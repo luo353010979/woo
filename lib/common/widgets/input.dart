@@ -94,10 +94,11 @@ class _InputWidgetState extends State<InputWidget> {
 
     // 显示密码按钮
     if (widget.obscureText == true) {
-      suffix = Icon(
-        showPassword == true ? Icons.visibility : Icons.visibility_off,
-        size: 20,
-      ).ripple().clipOval().gestures(
+      suffix =
+          Icon(
+            showPassword == true ? Icons.visibility : Icons.visibility_off,
+            size: 20,
+          ).ripple().clipOval().gestures(
             onTap: () => setState(() {
               showPassword = !showPassword!;
             }),
@@ -107,10 +108,7 @@ class _InputWidgetState extends State<InputWidget> {
     // 清除按钮
     Widget? cleanButton = widget.cleanable == true && showClean == true
         ? ButtonWidget.icon(
-            const Icon(
-              Icons.cancel,
-              size: 20,
-            ),
+            const Icon(Icons.cancel, size: 20),
             onTap: () {
               controller.clear();
               setState(() {
@@ -122,14 +120,13 @@ class _InputWidgetState extends State<InputWidget> {
         : null;
 
     // 占位文本
-    Widget? placeholder = controller.text.isEmpty &&
+    Widget? placeholder =
+        controller.text.isEmpty &&
             hasFocus == false &&
             widget.placeholder != null
         ? Align(
             alignment: Alignment.centerLeft,
-            child: TextWidget.muted(
-              widget.placeholder!,
-            ),
+            child: TextWidget.muted(widget.placeholder!),
           )
         : null;
 
@@ -138,10 +135,7 @@ class _InputWidgetState extends State<InputWidget> {
       controller: controller,
       focusNode: focusNode,
       readOnly: widget.readOnly ?? false,
-      style: TextStyle(
-        color: colorScheme.onSurface,
-        fontSize: 16,
-      ),
+      style: TextStyle(color: colorScheme.onSurface, fontSize: 16),
       cursorColor: colorScheme.onSurface,
       backgroundCursorColor: Colors.transparent,
       onTapOutside: (tapOutside) {
@@ -190,22 +184,14 @@ class _InputWidgetState extends State<InputWidget> {
         decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(AppRadius.input),
-          border: Border.all(
-            color: colorScheme.outline,
-            width: 0.5,
-          ),
+          border: Border.all(color: colorScheme.outline, width: 0.5),
         ),
         child: <Widget>[
           if (prefix != null) prefix!,
           Expanded(child: inputArea),
           if (suffix != null)
-            Padding(
-              padding: const EdgeInsets.only(left: 8),
-              child: suffix!,
-            ),
-        ].toRowSpace(
-          space: 5,
-        ),
+            Padding(padding: const EdgeInsets.only(left: 8), child: suffix!),
+        ].toRowSpace(space: 5),
       ),
     );
 
@@ -242,4 +228,3 @@ class _InputWidgetState extends State<InputWidget> {
     return _buildView();
   }
 }
-

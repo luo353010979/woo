@@ -330,7 +330,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
       case ButtonWidgetVariant.icon:
         color = widget.textColor ?? colorScheme.onPrimaryContainer;
         break;
-      }
+    }
 
     return color;
   }
@@ -356,7 +356,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
       case ButtonWidgetVariant.icon:
         color = colorScheme.surface;
         break;
-      }
+    }
     return color;
   }
 
@@ -381,7 +381,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
       case ButtonWidgetVariant.icon:
         color = colorScheme.surfaceContainer.withValues(alpha: 0.1);
         break;
-      }
+    }
     return color;
   }
 
@@ -399,7 +399,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
         return BorderRadius.circular(
           widget.borderRadius ?? _size(AppRadius.button),
         );
-      }
+    }
   }
 
   BoxBorder? _border() {
@@ -416,7 +416,7 @@ class _ButtonWidgetState extends State<ButtonWidget> {
           color: widget.borderColor ?? context.colors.scheme.outline,
           width: AppBorder.button,
         );
-      }
+    }
   }
 
   bool _ripple(bool enbaled) {

@@ -26,31 +26,28 @@ class WelcomeSliderWidget extends StatelessWidget {
     return Builder(
       builder: (BuildContext context) {
         return <Widget>[
-          // 图
-          if (item.image != null)
-            ImageWidget.img(
-              item.image!,
-              fit: BoxFit.cover,
-            ),
+              // 图
+              if (item.image != null)
+                ImageWidget.img(item.image!, fit: BoxFit.cover),
 
-          // 标题
-          if (item.title != null)
-            TextWidget.h1(
-              item.title ?? "",
-              maxLines: 2,
-              softWrap: true,
-              textAlign: TextAlign.center,
-            ),
+              // 标题
+              if (item.title != null)
+                TextWidget.h1(
+                  item.title ?? "",
+                  maxLines: 2,
+                  softWrap: true,
+                  textAlign: TextAlign.center,
+                ),
 
-          // 描述
-          if (item.desc != null)
-            TextWidget.label(
-              item.desc ?? "",
-              maxLines: 3,
-              softWrap: true,
-              textAlign: TextAlign.center,
-            )
-        ]
+              // 描述
+              if (item.desc != null)
+                TextWidget.label(
+                  item.desc ?? "",
+                  maxLines: 3,
+                  softWrap: true,
+                  textAlign: TextAlign.center,
+                ),
+            ]
             .toColumn(mainAxisAlignment: MainAxisAlignment.spaceAround)
             .width(MediaQuery.of(context).size.width);
       },
@@ -69,9 +66,7 @@ class WelcomeSliderWidget extends StatelessWidget {
         autoPlay: false, // 自动播放
         onPageChanged: (index, reason) => onPageChanged(index),
       ),
-      items: <Widget>[
-        for (var item in items) sliderItem(item),
-      ].toList(),
+      items: <Widget>[for (var item in items) sliderItem(item)].toList(),
     );
   }
 }

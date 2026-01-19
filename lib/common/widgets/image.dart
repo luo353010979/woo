@@ -89,8 +89,8 @@ class ImageWidget extends StatefulWidget {
     this.errorWidget,
     this.elevation,
     this.color,
-  })  : type = ImageWidgetType.svgRaw,
-        path = raw;
+  }) : type = ImageWidgetType.svgRaw,
+       path = raw;
 
   @override
   State<ImageWidget> createState() => _ImageWidgetState();
@@ -101,7 +101,8 @@ class _ImageWidgetState extends State<ImageWidget> {
     Widget ws = widget.placeholder ?? const SizedBox();
 
     // 是否是网络图片
-    bool isNetwork = widget.path.startsWith('http') ||
+    bool isNetwork =
+        widget.path.startsWith('http') ||
         widget.path.startsWith('https') ||
         widget.path.startsWith('//');
 
@@ -126,7 +127,6 @@ class _ImageWidgetState extends State<ImageWidget> {
         // },
       );
     }
-
     // 网络图片
     else if (widget.type == ImageWidgetType.img && isNetwork) {
       ws = CachedNetworkImage(
@@ -152,7 +152,6 @@ class _ImageWidgetState extends State<ImageWidget> {
             widget.errorWidget ?? const Icon(Icons.error),
       );
     }
-
     //  svg asset 图片
     else if (widget.type == ImageWidgetType.svg && !isNetwork) {
       ws = SvgPicture.asset(
@@ -170,7 +169,6 @@ class _ImageWidgetState extends State<ImageWidget> {
             ),
       );
     }
-
     //  svg 网络图片
     else if (widget.type == ImageWidgetType.svg && isNetwork) {
       ws = SvgPicture.network(
@@ -188,7 +186,6 @@ class _ImageWidgetState extends State<ImageWidget> {
             ),
       );
     }
-
     // svg raw
     else if (widget.type == ImageWidgetType.svgRaw) {
       ws = SvgPicture.string(
@@ -209,10 +206,7 @@ class _ImageWidgetState extends State<ImageWidget> {
 
     // 2 约束
     if (widget.width != null || widget.height != null) {
-      ws = ws.tight(
-        width: widget.width,
-        height: widget.height,
-      );
+      ws = ws.tight(width: widget.width, height: widget.height);
     }
 
     // 3 圆角

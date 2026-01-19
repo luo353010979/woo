@@ -8,7 +8,7 @@ import 'index.dart';
 class IconPage extends GetView<IconController> {
   const IconPage({super.key});
 
-   // 主视图
+  // 主视图
   Widget _buildView() {
     return <Widget>[
       // icon
@@ -58,8 +58,6 @@ class IconPage extends GetView<IconController> {
     ].toColumnSpace().center().scrollable();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<IconController>(
@@ -68,9 +66,7 @@ class IconPage extends GetView<IconController> {
       builder: (_) {
         return Scaffold(
           appBar: AppBar(title: const Text("icon")),
-          body: SafeArea(
-            child: _buildView(),
-          ),
+          body: SafeArea(child: _buildView()),
         );
       },
     );

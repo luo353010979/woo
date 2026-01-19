@@ -15,4 +15,3 @@ class AppElevation {
   /// 卡片
   static double get card => 0.5;
 }
-

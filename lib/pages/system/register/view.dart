@@ -44,9 +44,13 @@ class RegisterPage extends GetView<RegisterController> {
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
             Validatorless.min(
-                3, LocaleKeys.validatorMin.trParams({"size": "3"})),
+              3,
+              LocaleKeys.validatorMin.trParams({"size": "3"}),
+            ),
             Validatorless.max(
-                20, LocaleKeys.validatorMax.trParams({"size": "20"})),
+              20,
+              LocaleKeys.validatorMax.trParams({"size": "20"}),
+            ),
           ]),
         ).paddingBottom(AppSpace.listRow.w),
 
@@ -72,9 +76,13 @@ class RegisterPage extends GetView<RegisterController> {
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
             Validatorless.min(
-                3, LocaleKeys.validatorMin.trParams({"size": "3"})),
+              3,
+              LocaleKeys.validatorMin.trParams({"size": "3"}),
+            ),
             Validatorless.max(
-                20, LocaleKeys.validatorMax.trParams({"size": "20"})),
+              20,
+              LocaleKeys.validatorMax.trParams({"size": "20"}),
+            ),
           ]),
         ).paddingBottom(AppSpace.listRow.w),
 
@@ -87,9 +95,13 @@ class RegisterPage extends GetView<RegisterController> {
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
             Validatorless.min(
-                3, LocaleKeys.validatorMin.trParams({"size": "3"})),
+              3,
+              LocaleKeys.validatorMin.trParams({"size": "3"}),
+            ),
             Validatorless.max(
-                20, LocaleKeys.validatorMax.trParams({"size": "20"})),
+              20,
+              LocaleKeys.validatorMax.trParams({"size": "20"}),
+            ),
           ]),
         ).paddingBottom(AppSpace.listRow.w),
 
@@ -105,9 +117,7 @@ class RegisterPage extends GetView<RegisterController> {
             Validators.password(
               8,
               18,
-              LocaleKeys.validatorPassword.trParams(
-                {"min": "8", "max": "18"},
-              ),
+              LocaleKeys.validatorPassword.trParams({"min": "8", "max": "18"}),
             ),
           ]),
         ).paddingBottom(AppSpace.listRow.w * 2),

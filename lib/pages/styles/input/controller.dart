@@ -6,7 +6,6 @@ class InputController extends GetxController {
 
   TextEditingController emailController = TextEditingController();
 
-
   _initData() {
     update(["input"]);
   }

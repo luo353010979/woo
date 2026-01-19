@@ -1,6 +1,2 @@
 /// 缩放
-enum WidgetScale {
-  medium,
-  large,
-  small,
-}
+enum WidgetScale { medium, large, small }

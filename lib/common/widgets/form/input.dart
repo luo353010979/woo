@@ -21,53 +21,47 @@ class InputFormFieldWidget extends FormField<String> {
     this.autofocus,
     Function(String?)? validator,
   }) : super(
-          initialValue: initValue ?? controller?.text,
-          validator: (val) {
-            if (validator != null) {
-              return validator(val);
-            }
-            return null;
-          },
-          builder: (field) {
-            void onChangedHandler(String value) {
-              field.didChange(value);
-              onChanged?.call(value);
-            }
+         initialValue: initValue ?? controller?.text,
+         validator: (val) {
+           if (validator != null) {
+             return validator(val);
+           }
+           return null;
+         },
+         builder: (field) {
+           void onChangedHandler(String value) {
+             field.didChange(value);
+             onChanged?.call(value);
+           }
 
-            return <Widget>[
-              // 字段说明
-              TextWidget.label(
-                labelText,
-              ).paddingLeft(AppSpace.card),
+           return <Widget>[
+             // 字段说明
+             TextWidget.label(labelText).paddingLeft(AppSpace.card),
 
-              // 输入框
-              InputWidget(
-                placeholder: placeholder,
-                prefix: prefix,
-                suffix: suffix,
-                controller: controller,
-                obscureText: obscureText ?? false,
-                cleanable: cleanable ?? true,
-                onChanged: onChangedHandler,
-              ),
+             // 输入框
+             InputWidget(
+               placeholder: placeholder,
+               prefix: prefix,
+               suffix: suffix,
+               controller: controller,
+               obscureText: obscureText ?? false,
+               cleanable: cleanable ?? true,
+               onChanged: onChangedHandler,
+             ),
 
-              // 提示词
-              if (tipText != null)
-                TextWidget.muted(
-                  tipText,
-                ).paddingLeft(AppSpace.card),
+             // 提示词
+             if (tipText != null)
+               TextWidget.muted(tipText).paddingLeft(AppSpace.card),
 
-              // 错误提示
-              if (field.errorText != null)
-                TextWidget.muted(
-                  field.errorText!,
-                  color: field.context.colors.scheme.error,
-                ).paddingLeft(AppSpace.card),
-            ].toColumnSpace(
-              crossAxisAlignment: CrossAxisAlignment.start,
-            );
-          },
-        );
+             // 错误提示
+             if (field.errorText != null)
+               TextWidget.muted(
+                 field.errorText!,
+                 color: field.context.colors.scheme.error,
+               ).paddingLeft(AppSpace.card),
+           ].toColumnSpace(crossAxisAlignment: CrossAxisAlignment.start);
+         },
+       );
 
   /// 字段文字
   final String labelText;

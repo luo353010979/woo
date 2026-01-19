@@ -47,4 +47,3 @@ class Storage {
     return await _prefs.remove(key);
   }
 }
-

@@ -27,9 +27,7 @@ class _MainViewGetX extends GetView<MainController> {
 
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("MainPage"),
-    );
+    return const Center(child: Text("MainPage"));
   }
 
   @override
@@ -40,9 +38,7 @@ class _MainViewGetX extends GetView<MainController> {
       builder: (_) {
         return Scaffold(
           appBar: AppBar(title: const Text("main")),
-          body: SafeArea(
-            child: _buildView(),
-          ),
+          body: SafeArea(child: _buildView()),
         );
       },
     );

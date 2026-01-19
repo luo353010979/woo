@@ -53,7 +53,9 @@ class RouteObservers<R extends Route<dynamic>> extends RouteObserver<R> {
 
   @override
   void didStartUserGesture(
-      Route<dynamic> route, Route<dynamic>? previousRoute) {
+    Route<dynamic> route,
+    Route<dynamic>? previousRoute,
+  ) {
     super.didStartUserGesture(route, previousRoute);
   }
 
@@ -62,4 +64,3 @@ class RouteObservers<R extends Route<dynamic>> extends RouteObserver<R> {
     super.didStopUserGesture();
   }
 }
-

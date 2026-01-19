@@ -13,10 +13,7 @@ class Translation extends Translations {
   static const fallbackLocale = Locale('en', 'US');
 
   // 支持语言列表
-  static const supportedLocales = [
-    Locale('en', 'US'),
-    Locale('zh', 'CN'),
-  ];
+  static const supportedLocales = [Locale('en', 'US'), Locale('zh', 'CN')];
 
   // 代理
   static const localizationsDelegates = [
@@ -27,8 +24,5 @@ class Translation extends Translations {
 
   // 语言代码对应的翻译文本
   @override
-  Map<String, Map<String, String>> get keys => {
-        'en': localeEn,
-        'zh': localeZh,
-      };
+  Map<String, Map<String, String>> get keys => {'en': localeEn, 'zh': localeZh};
 }

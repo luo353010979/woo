@@ -21,8 +21,8 @@ class IconWidget extends StatelessWidget {
     this.isVertical,
     this.onTap,
     this.isExpanded,
-  })  : _height = height,
-        _width = width;
+  }) : _height = height,
+       _width = width;
 
   /// 图标类型
   final IconWidgetType type;
@@ -81,9 +81,9 @@ class IconWidget extends StatelessWidget {
     this.text,
     this.isVertical,
     this.onTap,
-  })  : _height = height,
-        _width = width,
-        type = IconWidgetType.icon;
+  }) : _height = height,
+       _width = width,
+       type = IconWidgetType.icon;
 
   const IconWidget.img(
     this.path, {
@@ -100,9 +100,9 @@ class IconWidget extends StatelessWidget {
     this.isVertical,
     this.onTap,
     this.isExpanded,
-  })  : _height = height,
-        _width = width,
-        type = IconWidgetType.img;
+  }) : _height = height,
+       _width = width,
+       type = IconWidgetType.img;
 
   const IconWidget.svg(
     this.path, {
@@ -119,9 +119,9 @@ class IconWidget extends StatelessWidget {
     this.isVertical,
     this.onTap,
     this.isExpanded,
-  })  : _height = height,
-        _width = width,
-        type = IconWidgetType.svg;
+  }) : _height = height,
+       _width = width,
+       type = IconWidgetType.svg;
 
   // 图标
   Widget _buildIcon(BuildContext context) {
@@ -191,25 +191,20 @@ class IconWidget extends StatelessWidget {
     Widget child = ws.length == 1
         ? ws[0]
         : isVertical == true
-            ? ws.toColumnSpace(
-                space: AppSpace.iconText,
-                mainAxisSize: MainAxisSize.min,
-              )
-            : ws.toRowSpace(
-                space: AppSpace.iconText,
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: isExpanded == true
-                    ? CrossAxisAlignment.start
-                    : CrossAxisAlignment.center,
-              );
+        ? ws.toColumnSpace(
+            space: AppSpace.iconText,
+            mainAxisSize: MainAxisSize.min,
+          )
+        : ws.toRowSpace(
+            space: AppSpace.iconText,
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: isExpanded == true
+                ? CrossAxisAlignment.start
+                : CrossAxisAlignment.center,
+          );
 
     // 4 点击事件
-    child = onTap == null
-        ? child
-        : InkWell(
-            onTap: onTap,
-            child: child,
-          );
+    child = onTap == null ? child : InkWell(onTap: onTap, child: child);
 
     return child;
   }

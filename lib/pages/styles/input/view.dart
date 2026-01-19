@@ -8,14 +8,11 @@ import 'index.dart';
 class InputPage extends GetView<InputController> {
   const InputPage({super.key});
 
-    // 主视图
+  // 主视图
   Widget _buildView() {
     return <Widget>[
       // 标准
-      InputWidget(
-        controller: controller.emailController,
-        placeholder: "Email",
-      ),
+      InputWidget(controller: controller.emailController, placeholder: "Email"),
 
       // 图标
       const InputWidget(
@@ -35,7 +32,6 @@ class InputPage extends GetView<InputController> {
     ].toColumnSpace().center().paddingAll(AppSpace.page);
   }
 
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<InputController>(
@@ -44,9 +40,7 @@ class InputPage extends GetView<InputController> {
       builder: (_) {
         return Scaffold(
           appBar: AppBar(title: const Text("input")),
-          body: SafeArea(
-            child: _buildView(),
-          ),
+          body: SafeArea(child: _buildView()),
         );
       },
     );

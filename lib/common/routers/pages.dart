@@ -1,12 +1,9 @@
-
 import 'package:get/get.dart';
 import 'observers.dart';
 import 'names.dart';
 import 'package:woo/pages/index.dart';
 
-
 class RoutePages {
-  
   // 历史记录
   static List<String> history = [];
 
@@ -14,146 +11,79 @@ class RoutePages {
 
   // 列表
   static List<GetPage> list = [
+    /// 购物车
+    GetPage(
+      name: RouteNames.cartApplyPromoCode,
+      page: () => const ApplyPromoCodePage(),
+    ),
+    GetPage(name: RouteNames.cartBuyDone, page: () => const BuyDonePage()),
+    GetPage(name: RouteNames.cartBuyNow, page: () => const BuyNowPage()),
+    GetPage(name: RouteNames.cartCartIndex, page: () => const CartIndexPage()),
 
-      /// 购物车
-      GetPage(
-        name: RouteNames.cartApplyPromoCode,
-        page: () => const ApplyPromoCodePage(),
-      ),
-      GetPage(
-        name: RouteNames.cartBuyDone,
-        page: () => const BuyDonePage(),
-      ),
-      GetPage(
-        name: RouteNames.cartBuyNow,
-        page: () => const BuyNowPage(),
-      ),
-      GetPage(
-        name: RouteNames.cartCartIndex,
-        page: () => const CartIndexPage(),
-      ),
+    /// 商品
+    GetPage(name: RouteNames.goodsCategory, page: () => const CategoryPage()),
+    GetPage(name: RouteNames.goodsHome, page: () => const HomePage()),
+    GetPage(
+      name: RouteNames.goodsProductDetails,
+      page: () => const ProductDetailsPage(),
+    ),
+    GetPage(
+      name: RouteNames.goodsProductList,
+      page: () => const ProductListPage(),
+    ),
 
-      /// 商品
-      GetPage(
-        name: RouteNames.goodsCategory,
-        page: () => const CategoryPage(),
-      ),
-      GetPage(
-        name: RouteNames.goodsHome,
-        page: () => const HomePage(),
-      ),
-      GetPage(
-        name: RouteNames.goodsProductDetails,
-        page: () => const ProductDetailsPage(),
-      ),
-      GetPage(
-        name: RouteNames.goodsProductList,
-        page: () => const ProductListPage(),
-      ),
+    /// 我的
+    GetPage(name: RouteNames.myLanguage, page: () => const LanguagePage()),
+    GetPage(name: RouteNames.myMyAddress, page: () => const MyAddressPage()),
+    GetPage(name: RouteNames.myMyIndex, page: () => const MyIndexPage()),
+    GetPage(
+      name: RouteNames.myOrderDetails,
+      page: () => const OrderDetailsPage(),
+    ),
+    GetPage(name: RouteNames.myOrderList, page: () => const OrderListPage()),
+    GetPage(
+      name: RouteNames.myProfileEdit,
+      page: () => const ProfileEditPage(),
+    ),
+    GetPage(name: RouteNames.myTheme, page: () => const ThemePage()),
 
-      /// 我的
-      GetPage(
-        name: RouteNames.myLanguage,
-        page: () => const LanguagePage(),
-      ),
-      GetPage(
-        name: RouteNames.myMyAddress,
-        page: () => const MyAddressPage(),
-      ),
-      GetPage(
-        name: RouteNames.myMyIndex,
-        page: () => const MyIndexPage(),
-      ),
-      GetPage(
-        name: RouteNames.myOrderDetails,
-        page: () => const OrderDetailsPage(),
-      ),
-      GetPage(
-        name: RouteNames.myOrderList,
-        page: () => const OrderListPage(),
-      ),
-      GetPage(
-        name: RouteNames.myProfileEdit,
-        page: () => const ProfileEditPage(),
-      ),
-      GetPage(
-        name: RouteNames.myTheme,
-        page: () => const ThemePage(),
-      ),
+    /// 搜索
+    GetPage(
+      name: RouteNames.searchSearchFilter,
+      page: () => const SearchFilterPage(),
+    ),
+    GetPage(
+      name: RouteNames.searchSearchIndex,
+      page: () => const SearchIndexPage(),
+    ),
 
+    /// 系统
+    /// 首页
+    GetPage(name: RouteNames.systemMain, page: () => const MainPage()),
+    GetPage(name: RouteNames.systemLogin, page: () => const LoginPage()),
 
-      /// 搜索
-      GetPage(
-        name: RouteNames.searchSearchFilter,
-        page: () => const SearchFilterPage(),
-      ),
-      GetPage(
-        name: RouteNames.searchSearchIndex,
-        page: () => const SearchIndexPage(),
-      ),
+    GetPage(name: RouteNames.systemRegister, page: () => const RegisterPage()),
+    GetPage(
+      name: RouteNames.systemRegisterPin,
+      page: () => const RegisterPinPage(),
+    ),
+    GetPage(name: RouteNames.systemSplash, page: () => const SplashPage()),
+    GetPage(
+      name: RouteNames.systemUserAgreement,
+      page: () => const UserAgreementPage(),
+    ),
+    GetPage(name: RouteNames.systemWelcome, page: () => const WelcomePage()),
 
-
-      /// 系统
-      /// 首页
-      GetPage(
-        name: RouteNames.systemMain,
-        page: () => const MainPage(),
-      ),
-      GetPage(
-        name: RouteNames.systemLogin,
-        page: () => const LoginPage(),
-      ),
-      
-      GetPage(
-        name: RouteNames.systemRegister,
-        page: () => const RegisterPage(),
-      ),
-      GetPage(
-        name: RouteNames.systemRegisterPin,
-        page: () => const RegisterPinPage(),
-      ),
-      GetPage(
-        name: RouteNames.systemSplash,
-        page: () => const SplashPage(),
-      ),
-      GetPage(
-        name: RouteNames.systemUserAgreement,
-        page: () => const UserAgreementPage(),
-      ),
-      GetPage(
-        name: RouteNames.systemWelcome,
-        page: () => const WelcomePage(),
-      ),
-
-
-      /// 样式
-        GetPage(
-        name: RouteNames.stylesStyleIndex,
-        page: () => const StyleIndexPage(),
-      ),
-        GetPage(
-        name: RouteNames.stylesText,
-        page: () => const TextPage(),
-      ),
-        GetPage(
-        name: RouteNames.stylesImage,
-        page: () => const ImagePage(),
-      ),
-        GetPage(
-        name: RouteNames.stylesIcon,
-        page: () => const IconPage(),
-      ),
-         GetPage(
-        name: RouteNames.stylesButton,
-        page: () => const ButtonDartPage(),
-      ),
-         GetPage(
-        name: RouteNames.stylesInput,
-        page: () => const InputPage(),
-      ),
-         GetPage(
-        name: RouteNames.stylesTextForm,
-        page: () => const TextFormPage(),
-      ),
+    /// 样式
+    GetPage(
+      name: RouteNames.stylesStyleIndex,
+      page: () => const StyleIndexPage(),
+    ),
+    GetPage(name: RouteNames.stylesText, page: () => const TextPage()),
+    GetPage(name: RouteNames.stylesImage, page: () => const ImagePage()),
+    GetPage(name: RouteNames.stylesIcon, page: () => const IconPage()),
+    GetPage(name: RouteNames.stylesButton, page: () => const ButtonDartPage()),
+    GetPage(name: RouteNames.stylesInput, page: () => const InputPage()),
+    GetPage(name: RouteNames.stylesTextForm, page: () => const TextFormPage()),
   ];
 }

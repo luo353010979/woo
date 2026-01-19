@@ -9,7 +9,7 @@ class ButtonDartPage extends GetView<ButtonDartController> {
   const ButtonDartPage({super.key});
 
   // 主视图
-    // 主视图
+  // 主视图
   Widget _buildView(BuildContext context) {
     return <Widget>[
       // primary
@@ -43,19 +43,14 @@ class ButtonDartPage extends GetView<ButtonDartController> {
       const ButtonWidget.primary("enabled = false"),
 
       // width 200
-      ButtonWidget.primary(
-        "width = 200",
-        onTap: () {},
-        width: 200,
-      ),
+      ButtonWidget.primary("width = 200", onTap: () {}, width: 200),
 
       // primary
-      ButtonWidget.primary("primary",
-          icon: Icon(
-            Icons.home,
-            color: context.colors.scheme.onPrimary,
-          ),
-          onTap: () {}),
+      ButtonWidget.primary(
+        "primary",
+        icon: Icon(Icons.home, color: context.colors.scheme.onPrimary),
+        onTap: () {},
+      ),
 
       // primary.sm
       ButtonWidget.primary(
@@ -72,11 +67,7 @@ class ButtonDartPage extends GetView<ButtonDartController> {
       ),
 
       // primary.loading
-      ButtonWidget.primary(
-        "primary.loading",
-        loading: true,
-        onTap: () {},
-      ),
+      ButtonWidget.primary("primary.loading", loading: true, onTap: () {}),
 
       // destructive.loading
       ButtonWidget.destructive(
@@ -87,17 +78,13 @@ class ButtonDartPage extends GetView<ButtonDartController> {
 
       // icon
       ButtonWidget.icon(
-          Icon(
-            Icons.home,
-            color: context.colors.primary,
-          ),
-          onTap: () {}),
+        Icon(Icons.home, color: context.colors.primary),
+        onTap: () {},
+      ),
 
       //
     ].toColumnSpace().center().scrollable();
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -107,9 +94,7 @@ class ButtonDartPage extends GetView<ButtonDartController> {
       builder: (_) {
         return Scaffold(
           appBar: AppBar(title: const Text("button_dart")),
-          body: SafeArea(
-            child: _buildView(context),
-          ),
+          body: SafeArea(child: _buildView(context)),
         );
       },
     );
