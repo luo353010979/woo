@@ -59,7 +59,9 @@ class RoutePages {
 
     /// 系统
     /// 首页
-    GetPage(name: RouteNames.systemMain, page: () => const MainPage()),
+    GetPage(name: RouteNames.systemMain, page: () => const MainPage(),binding: MainBinding(),),
+
+     /// 登录
     GetPage(name: RouteNames.systemLogin, page: () => const LoginPage()),
 
     GetPage(name: RouteNames.systemRegister, page: () => const RegisterPage()),
@@ -73,6 +75,7 @@ class RoutePages {
       page: () => const UserAgreementPage(),
     ),
     GetPage(name: RouteNames.systemWelcome, page: () => const WelcomePage()),
+    GetPage(name: RouteNames.systemMsg, page: () => const MsgPage()),
 
     /// 样式
     GetPage(

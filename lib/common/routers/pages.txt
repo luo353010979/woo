@@ -104,6 +104,10 @@
         page: () => const MainPage(),
       ),
       GetPage(
+        name: RouteNames.systemMsg,
+        page: () => const MsgPage(),
+      ),
+      GetPage(
         name: RouteNames.systemRegister,
         page: () => const RegisterPage(),
       ),

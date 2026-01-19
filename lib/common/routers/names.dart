@@ -25,6 +25,7 @@ class RouteNames {
   static const systemSplash = '/system_splash';
   static const systemUserAgreement = '/system_user_agreement';
   static const systemWelcome = '/system_welcome';
+  static const systemMsg = '/system_msg';
 
   static const stylesStyleIndex = '/styles_style_index';
   static const stylesText = '/styles_text';

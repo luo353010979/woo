@@ -31,3 +31,4 @@ export 'styles/icon/index.dart';
 export 'styles/button/index.dart';
 export 'styles/input/index.dart';
 export 'styles/text_form/index.dart';
+export 'system/msg/index.dart';
