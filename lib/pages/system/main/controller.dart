@@ -4,7 +4,9 @@ import 'package:woo/common/index.dart';
 class MainController extends GetxController {
   MainController();
 
-  _initData() {
+  _initData() async {
+    // 读取用户 profile
+    await UserService.to.getProfile();
     update(["main"]);
   }
 
@@ -19,13 +21,5 @@ class MainController extends GetxController {
   void onReady() {
     super.onReady();
     _initData();
-
-    // 跳转注册页
-    Get.toNamed(RouteNames.systemRegister);
   }
-
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
 }

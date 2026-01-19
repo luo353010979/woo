@@ -4,11 +4,6 @@ import 'package:woo/common/index.dart';
 class SplashController extends GetxController {
   SplashController();
 
-  _initData() {
-    update(["splash"]);
-  }
-
-  void onTap() {}
 
   /// 跳转页面
   _jumpToPage() {
@@ -28,7 +23,6 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    // _initData();
     _jumpToPage();
   }
 }
