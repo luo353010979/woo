@@ -4,7 +4,6 @@ import 'package:woo/common/index.dart';
 class SplashController extends GetxController {
   SplashController();
 
-
   /// 跳转页面
   _jumpToPage() {
     // 延迟1秒
@@ -18,6 +17,14 @@ class SplashController extends GetxController {
         Get.offAllNamed(RouteNames.systemWelcome);
       }
     });
+  }
+
+  @override
+  void onInit() {
+    super.onInit();
+
+    // 设置系统样式
+    AppTheme.setSystemStyle();
   }
 
   @override
